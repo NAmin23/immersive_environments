@@ -16,9 +16,9 @@ public class SpellbookDown : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "OVRHandPrefabL")
+        if (other.gameObject.name == "OVRHandPrefabL" && gameObject.name == "SpellbookDown")
         {
-            String temp = "Dismiss";
+            String temp = "Down";
             leftInputText.text = temp;
 
             j = 0;
@@ -33,7 +33,7 @@ public class SpellbookDown : MonoBehaviour
         {
             spellbook.transform.position = Vector3.Lerp(spellbookDest.position, spellbookOrigin.position, j);
             j = j + 0.02f;
-            leftInputText.text = j.ToString();
+            //leftInputText.text = j.ToString();
         }
 
         if (j >= 1 && (Vector3.Distance(spellbook.transform.position, spellbookOrigin.position) < .02f))
