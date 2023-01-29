@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PancakeController : MonoBehaviour
 {
-    public GameObject targetObject;
+    public GameObject cameraObject;
+    public GameObject rightHandObject;
+    public List<GameObject> disableOnPancake;
+
     public float Sensitivity
     {
         get { return sensitivity; }
@@ -18,6 +21,18 @@ public class PancakeController : MonoBehaviour
     const string xAxis = "Mouse X"; //Strings in direct code generate garbage, storing and re-using them creates no garbage
     const string yAxis = "Mouse Y";
 
+    void Start()
+    {
+
+        if (!OVRManager.isHmdPresent)
+        {
+            foreach (var obj in disableOnPancake)
+            {
+                obj.SetActive(false);
+            }
+        }
+    }
+
     void Update()
     {
         rotation.x += Input.GetAxis(xAxis) * sensitivity;
@@ -26,6 +41,7 @@ public class PancakeController : MonoBehaviour
         var xQuat = Quaternion.AngleAxis(rotation.x, Vector3.up);
         var yQuat = Quaternion.AngleAxis(rotation.y, Vector3.left);
 
-        targetObject.transform.localRotation = xQuat * yQuat;
+        cameraObject.transform.localRotation = xQuat * yQuat;
+        rightHandObject.transform.position = cameraObject.transform.position + cameraObject.transform.forward * 1.0f;
     }
 }
