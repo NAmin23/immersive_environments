@@ -9,6 +9,9 @@ public class PancakeController : MonoBehaviour
     public GameObject rightHandDisplay;
     public List<GameObject> disableOnPancake;
 
+    private Vector2 handXYOffset;
+    private float handDistance = 0.5f;
+
     public float Sensitivity
     {
         get { return sensitivity; }
@@ -38,14 +41,38 @@ public class PancakeController : MonoBehaviour
 
     void Update()
     {
-        rotation.x += Input.GetAxis(xAxis) * sensitivity;
-        rotation.y += Input.GetAxis(yAxis) * sensitivity;
-        rotation.y = Mathf.Clamp(rotation.y, -yRotationLimit, yRotationLimit);
-        var xQuat = Quaternion.AngleAxis(rotation.x, Vector3.up);
-        var yQuat = Quaternion.AngleAxis(rotation.y, Vector3.left);
+        var xDelta = Input.GetAxis(xAxis) * sensitivity;
+        var yDelta = Input.GetAxis(yAxis) * sensitivity;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            // Move hand on screen
+            this.handXYOffset.x += xDelta * 0.01f;
+            this.handXYOffset.y += yDelta * 0.01f;
+        }
+        else
+        {
+            // Rotate camera
+            rotation.x += xDelta;
+            rotation.y += yDelta;
 
-        cameraObject.transform.localRotation = xQuat * yQuat;
-        rightHandObject.transform.position = cameraObject.transform.position + cameraObject.transform.forward * 1.0f;
-        rightHandObject.transform.rotation = cameraObject.transform.localRotation;
+            rotation.y = Mathf.Clamp(rotation.y, -yRotationLimit, yRotationLimit);
+            var xQuat = Quaternion.AngleAxis(rotation.x, Vector3.up);
+            var yQuat = Quaternion.AngleAxis(rotation.y, Vector3.left);
+
+            cameraObject.transform.localRotation = xQuat * yQuat;
+        }
+
+        // Move hand.
+        this.handDistance = Mathf.Clamp(this.handDistance + Input.mouseScrollDelta.y * 0.1f, 0.3f, 3.0f);
+
+        rightHandObject.transform.SetPositionAndRotation(
+            cameraObject.transform.localToWorldMatrix * new Vector4(
+                this.handXYOffset.x,
+                this.handXYOffset.y,
+                this.handDistance,
+                1.0f
+            ),
+            cameraObject.transform.rotation
+        );
     }
 }
