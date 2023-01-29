@@ -501,7 +501,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2110287146}
-  m_Father: {fileID: 2127269564}
+  m_Father: {fileID: 1742721701}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &587270909
@@ -569,6 +569,7 @@ MonoBehaviour:
   spellbookOrigin: {fileID: 840322659}
   spellbookDest: {fileID: 674699771}
   spellbookUp: {fileID: 1520661927}
+  centralEyeAnchor: {fileID: 2127269564}
 --- !u!1001 &673466720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -798,7 +799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &807980526
 Transform:
   m_ObjectHideFlags: 0
@@ -1619,7 +1620,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 807980526}
-  m_Father: {fileID: 2127269564}
+  m_Father: {fileID: 1742721701}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1520661929
@@ -1660,6 +1661,7 @@ MonoBehaviour:
   spellbookOrigin: {fileID: 840322659}
   spellbookDest: {fileID: 674699771}
   raising: 0
+  centralEyeAnchor: {fileID: 2127269564}
 --- !u!54 &1520661931
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1857,6 +1859,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 901861099}
+  - {fileID: 1520661928}
+  - {fileID: 587270908}
   - {fileID: 2127269564}
   - {fileID: 1189575519}
   - {fileID: 1389207697}
@@ -2286,7 +2290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2110287146
 Transform:
   m_ObjectHideFlags: 0
@@ -2406,8 +2410,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 51062800}
-  - {fileID: 1520661928}
-  - {fileID: 587270908}
   - {fileID: 840322659}
   - {fileID: 674699771}
   m_Father: {fileID: 1742721701}
