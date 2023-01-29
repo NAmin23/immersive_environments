@@ -13,6 +13,13 @@ public class SpellbookDown : MonoBehaviour
     private float j = 0; // iterator for linear interpolation
     public GameObject spellbookUp;
     private bool lowering = false;
+    public Transform centralEyeAnchor;
+    private Transform startPos;
+
+    private void Start()
+    {
+        startPos = gameObject.transform;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,6 +36,8 @@ public class SpellbookDown : MonoBehaviour
 
     void Update()
     {
+        gameObject.transform.position = centralEyeAnchor.position + startPos.position;
+
         if ((spellbook.activeSelf == true) && j < 1 && (spellbookUp.GetComponent<SpellbookUp>().raising == false) && (lowering == true))
         {
             spellbook.transform.position = Vector3.Lerp(spellbookDest.position, spellbookOrigin.position, j);

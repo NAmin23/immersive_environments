@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using System.Security.Cryptography;
 
 public class SpellbookUp : MonoBehaviour
 {
@@ -12,6 +13,13 @@ public class SpellbookUp : MonoBehaviour
     public Transform spellbookDest;
     private float i = 0; // iterator for linear interpolation
     public bool raising = false;
+    public Transform centralEyeAnchor;
+    private Transform startPos;
+
+    private void Start()
+    {
+        startPos = gameObject.transform;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,6 +37,8 @@ public class SpellbookUp : MonoBehaviour
 
     void Update()
     {
+        gameObject.transform.position = centralEyeAnchor.position + startPos.position;
+
         if ((spellbook.activeSelf == true) && (raising == true)) ;
         {
             if (i < 1)
@@ -38,7 +48,7 @@ public class SpellbookUp : MonoBehaviour
             }
         }
 
-        if(i >= 1)
+        if (i >= 1)
         {
             raising = false;
         }
