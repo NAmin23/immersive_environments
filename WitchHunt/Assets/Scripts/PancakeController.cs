@@ -6,6 +6,7 @@ public class PancakeController : MonoBehaviour
 {
     public GameObject cameraObject;
     public GameObject rightHandObject;
+    public GameObject rightHandDisplay;
     public List<GameObject> disableOnPancake;
 
     public float Sensitivity
@@ -30,6 +31,8 @@ public class PancakeController : MonoBehaviour
             {
                 obj.SetActive(false);
             }
+
+            rightHandDisplay.SetActive(true);
         }
     }
 
@@ -43,5 +46,6 @@ public class PancakeController : MonoBehaviour
 
         cameraObject.transform.localRotation = xQuat * yQuat;
         rightHandObject.transform.position = cameraObject.transform.position + cameraObject.transform.forward * 1.0f;
+        rightHandObject.transform.rotation = cameraObject.transform.localRotation;
     }
 }
