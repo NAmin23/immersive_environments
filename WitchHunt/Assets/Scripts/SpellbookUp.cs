@@ -14,12 +14,6 @@ public class SpellbookUp : MonoBehaviour
     private float i = 0; // iterator for linear interpolation
     public bool raising = false;
     public Transform centralEyeAnchor;
-    private Transform startPos;
-
-    private void Start()
-    {
-        startPos = gameObject.transform;
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -37,7 +31,7 @@ public class SpellbookUp : MonoBehaviour
 
     void Update()
     {
-        gameObject.transform.position = centralEyeAnchor.position + startPos.position;
+        gameObject.transform.position = centralEyeAnchor.position + new Vector3(0.0f, 0.09f, 0.16f);
 
         if ((spellbook.activeSelf == true) && (raising == true)) ;
         {

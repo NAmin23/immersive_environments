@@ -14,12 +14,6 @@ public class SpellbookDown : MonoBehaviour
     public GameObject spellbookUp;
     private bool lowering = false;
     public Transform centralEyeAnchor;
-    private Transform startPos;
-
-    private void Start()
-    {
-        startPos = gameObject.transform;
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -36,7 +30,7 @@ public class SpellbookDown : MonoBehaviour
 
     void Update()
     {
-        gameObject.transform.position = centralEyeAnchor.position + startPos.position;
+        gameObject.transform.position = centralEyeAnchor.position + new Vector3(0.0f, -0.25f, 0.16f);
 
         if ((spellbook.activeSelf == true) && j < 1 && (spellbookUp.GetComponent<SpellbookUp>().raising == false) && (lowering == true))
         {
