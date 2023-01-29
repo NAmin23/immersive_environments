@@ -17,7 +17,7 @@ public class SpellbookUp : MonoBehaviour
     {
         if (other.gameObject.name == "OVRHandPrefabL")
         {
-            String temp = "Raise";
+            String temp = "Up";
             leftInputText.text = temp;
 
             spellbook.SetActive(true);
