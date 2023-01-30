@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bubble
+  m_Name: Glass
   m_Shader: {fileID: -6465566751694194690, guid: baf7239c23d104df99a2985f83de7286, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -78,7 +78,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 0.7
+    - _Alpha: 0.5
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _BumpScale: 1
@@ -88,12 +88,12 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.768
     - _GlossyReflections: 1
-    - _IOR: 1.2
-    - _Metallic: 0.2
+    - _IOR: 1.4
+    - _Metallic: 0.8
     - _Mode: 3
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Smoothness: 0.5
+    - _Smoothness: 0.9
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 0
     - _SrcBlend: 1
@@ -101,10 +101,10 @@ Material:
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
-    - _Base_Color: {r: 1, g: 0.9479668, b: 0, a: 1}
+    - _Base_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.07075471, g: 0.62453055, b: 1, a: 0.5176471}
-    - _EdgeGlow: {r: 48.502934, g: 42.70393, b: 24.480255, a: 0.5254902}
-    - _Emission: {r: 7.4642644, g: 0, b: 6.4793944, a: 1}
+    - _EdgeGlow: {r: 8.935687, g: 12.011337, b: 8.781874, a: 1}
+    - _Emission: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
     - _EmissionColor: {r: 1.575479, g: 0, b: 1.0737903, a: 1}
-    - _Emission_2: {r: 10.053539, g: 3.7183177, b: 0.52164596, a: 1}
+    - _Emission_2: {r: 0.67758024, g: 1, b: 0.1745283, a: 1}
   m_BuildTextureStacks: []
