@@ -11,6 +11,15 @@ public class spellbookMovement : MonoBehaviour
     public Boolean movingUp;
     public Transform currPos;
 
+    private Animation anim;
+    public AnimationClip openAnim;
+
+    private void Start()
+    {
+        anim = gameObject.GetComponent<Animation>();
+        anim.clip = openAnim;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -34,5 +43,10 @@ public class spellbookMovement : MonoBehaviour
                 gameObject.SetActive(false);
             }
         }
+    }
+
+    public void PlayAnim()
+    {
+        anim.Play();
     }
 }
