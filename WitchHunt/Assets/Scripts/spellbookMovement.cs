@@ -7,7 +7,7 @@ public class spellbookMovement : MonoBehaviour
 {
     public Transform spellbookOrigin;
     public Transform spellbookDest;
-    private float i; //iterator
+    public float i; //iterator
     public Boolean movingUp;
     public Transform currPos;
 

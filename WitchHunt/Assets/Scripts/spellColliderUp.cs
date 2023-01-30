@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class spellColliderUp : MonoBehaviour
 {
-    public gameObject spellbook;
+    public GameObject spellbook;
     public TMP_Text leftInputText;
 
     private void OnTriggerEnter(Collider other)
