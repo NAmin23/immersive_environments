@@ -9,7 +9,6 @@ public class spellbookMovement : MonoBehaviour
     public Transform spellbookDest;
     private float i; //iterator
     public Boolean movingUp;
-    public Boolean movingDown;
     public Transform currPos;
 
     // Update is called once per frame
@@ -17,14 +16,23 @@ public class spellbookMovement : MonoBehaviour
     {
         if(movingUp)
         {
-            spellbook.transform.position = Vector3.Lerp(currPos.position, spellbookDest.position, i);
-            i = i + 0.02f
+            if(i < 1)
+            {
+                gameObject.transform.position = Vector3.Lerp(currPos.position, spellbookDest.position, i);
+                i = i + 0.02f;
+            }
         }
-        else if (movingDown)
+        else
         {
-            spellbook.transform.position = Vector3.Lerp(currPos.position, spellbookOrigin.position, i);
-            i = i + 0.02f
+            if(i < 1)
+            {
+                gameObject.transform.position = Vector3.Lerp(currPos.position, spellbookOrigin.position, i);
+                i = i + 0.02f;
+            }
+            if (i >= 1)
+            {
+                gameObject.SetActive(false);
+            }
         }
-
     }
 }
