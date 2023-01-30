@@ -19,7 +19,7 @@ public class spellbookMovement : MonoBehaviour
             if(i < 1)
             {
                 gameObject.transform.position = Vector3.Lerp(currPos.position, spellbookDest.position, i);
-                i = i + 0.02f;
+                i = i + 0.01f;
             }
         }
         else
@@ -27,7 +27,7 @@ public class spellbookMovement : MonoBehaviour
             if(i < 1)
             {
                 gameObject.transform.position = Vector3.Lerp(currPos.position, spellbookOrigin.position, i);
-                i = i + 0.02f;
+                i = i + 0.01f;
             }
             if (i >= 1)
             {
