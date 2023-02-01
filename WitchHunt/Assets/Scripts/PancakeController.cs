@@ -9,6 +9,8 @@ public class PancakeController : MonoBehaviour
     public GameObject rightHandDisplay;
     public List<GameObject> disableOnPancake;
 
+    public HandController handControls;
+
     private Vector2 handXYOffset;
     private float handDistance = 0.5f;
 
@@ -41,6 +43,15 @@ public class PancakeController : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            this.handControls.TryStartGrab();
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            this.handControls.TryEndGrab();
+        }
+
         var xDelta = Input.GetAxis(xAxis) * sensitivity;
         var yDelta = Input.GetAxis(yAxis) * sensitivity;
         if (Input.GetKey(KeyCode.LeftShift))
