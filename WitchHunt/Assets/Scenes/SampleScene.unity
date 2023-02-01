@@ -1205,7 +1205,6 @@ GameObject:
   - component: {fileID: 1006201657}
   - component: {fileID: 1006201656}
   - component: {fileID: 1006201662}
-  - component: {fileID: 1006201661}
   - component: {fileID: 1006201660}
   m_Layer: 0
   m_Name: Sphere
@@ -1293,7 +1292,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006201655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 1.99}
+  m_LocalPosition: {x: 0, y: 1.817, z: 1.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1312,21 +1311,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285921659b53041399b9926167a2ede1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!138 &1006201661
-FixedJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1006201655}
-  m_ConnectedBody: {fileID: 0}
-  m_ConnectedArticulationBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
 --- !u!54 &1006201662
 Rigidbody:
   m_ObjectHideFlags: 0
