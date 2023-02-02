@@ -11,7 +11,8 @@ public class HandController : MonoBehaviour
     private Grabbable grabbed;
     public Rigidbody rb;
 
-    HashSet<Grabbable> grabCandidates = new HashSet<Grabbable>();
+    private HashSet<Grabbable> grabCandidates = new HashSet<Grabbable>();
+    private Grabbable bestGrabCandidate = null;
 
     // Start is called before the first frame update
     void Start()
@@ -19,12 +20,24 @@ public class HandController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         this.deltaPosition = (this.transform.position - this.lastPosition) / Time.fixedDeltaTime;
-        Debug.Log(this.deltaPosition);
         this.lastPosition = this.transform.position;
+    }
+
+    void Update()
+    {
+        var newBestGrabCandidate = getBestGrabCandidate();
+        if (newBestGrabCandidate != null && newBestGrabCandidate != this.bestGrabCandidate)
+        {
+            if (this.bestGrabCandidate != null)
+            {
+                this.bestGrabCandidate.Unhighlight();
+            }
+            this.bestGrabCandidate = newBestGrabCandidate;
+            this.bestGrabCandidate.Highlight();
+        }
     }
 
     private Grabbable getBestGrabCandidate()
@@ -48,7 +61,6 @@ public class HandController : MonoBehaviour
         if (other.gameObject.TryGetComponent<Grabbable>(out var grabbable))
         {
             this.grabCandidates.Add(grabbable);
-            Debug.Log(this.grabCandidates.Count);
         }
     }
 
@@ -57,7 +69,11 @@ public class HandController : MonoBehaviour
         if (other.gameObject.TryGetComponent<Grabbable>(out var grabbable))
         {
             this.grabCandidates.Remove(grabbable);
-            Debug.Log(this.grabCandidates.Count);
+            if (grabbable == bestGrabCandidate)
+            {
+                bestGrabCandidate = null;
+                grabbable.Unhighlight();
+            }
         }
     }
 
@@ -78,7 +94,6 @@ public class HandController : MonoBehaviour
     {
         if (this.grabbed)
         {
-            Debug.Log(this.deltaPosition);
             this.grabbed.TryRelease();
             this.grabbed.rb.velocity = this.deltaPosition;
         }
