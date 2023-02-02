@@ -6,7 +6,7 @@ using UnityEngine;
 public class Grabbable : MonoBehaviour
 {
     // Start is called before the first frame update
-    Rigidbody rb;
+    public Rigidbody rb;
     FixedJoint joint;
 
     HandController grabbingHand;

@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody), typeof(Collider))]
 public class HandController : MonoBehaviour
 {
+    private Vector3 lastPosition;
+    private Vector3 deltaPosition;
+
     private Grabbable grabbed;
     public Rigidbody rb;
 
@@ -17,9 +20,11 @@ public class HandController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-
+        this.deltaPosition = (this.transform.position - this.lastPosition) / Time.fixedDeltaTime;
+        Debug.Log(this.deltaPosition);
+        this.lastPosition = this.transform.position;
     }
 
     private Grabbable getBestGrabCandidate()
@@ -73,7 +78,9 @@ public class HandController : MonoBehaviour
     {
         if (this.grabbed)
         {
+            Debug.Log(this.deltaPosition);
             this.grabbed.TryRelease();
+            this.grabbed.rb.velocity = this.deltaPosition;
         }
         return false;
     }
