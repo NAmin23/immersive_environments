@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-74827716300759638
+--- !u!114 &-7054961739658392110
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,13 +20,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Glass
-  m_Shader: {fileID: -6465566751694194690, guid: baf7239c23d104df99a2985f83de7286, type: 3}
+  m_Name: Potion1
+  m_Shader: {fileID: -6465566751694194690, guid: a4b6470f6a8dc4426b24a9bd23298de7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 0
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -36,6 +36,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Mask_R_Emission:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -68,6 +76,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Normal_Map:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -78,33 +90,57 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 0.5
+    - Brightness_Rim: 2
+    - Rim_Power: 5
+    - Toon_Ramp_Offset: 0.5
+    - Toon_Ramp_Smoothness: 0
+    - _Alpha: 0.25
+    - _Ambient: 0
+    - _Amplitude: 1
+    - _BUILTIN_AlphaClip: 0
+    - _BUILTIN_Blend: 0
+    - _BUILTIN_CullMode: 2
+    - _BUILTIN_DstBlend: 0
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
+    - _BUILTIN_SrcBlend: 1
+    - _BUILTIN_Surface: 0
+    - _BUILTIN_ZTest: 4
+    - _BUILTIN_ZWrite: 1
+    - _BUILTIN_ZWriteControl: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
+    - _Depthpower: 1
     - _DetailNormalMapScale: 1
-    - _DstBlend: 10
+    - _DstBlend: 0
+    - _Emission: 2
+    - _Frequency: 10
     - _GlossMapScale: 1
-    - _Glossiness: 0.768
+    - _Glossiness: 0.461
     - _GlossyReflections: 1
-    - _IOR: 1.4
-    - _Metallic: 0.8
-    - _Mode: 3
+    - _IOR: 1.2
+    - _Metallic: 0
+    - _Mode: 0
     - _OcclusionStrength: 1
+    - _Opacity: 1
     - _Parallax: 0.02
-    - _Smoothness: 0.9
+    - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 0
     - _SrcBlend: 1
-    - _Thickness: 1
+    - _StartFrequency: 4
+    - _Toon_Ramp_Offset_Point: 0.5
     - _UVSec: 0
-    - _ZWrite: 0
+    - _Useblack: 0
+    - _Usedepth: 0
+    - _ZWrite: 1
     m_Colors:
-    - _Base_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.07075471, g: 0.62453055, b: 1, a: 0.5176471}
-    - _EdgeGlow: {r: 8.935687, g: 12.011337, b: 8.781874, a: 1}
-    - _Emission: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
-    - _EmissionColor: {r: 1.575479, g: 0, b: 1.0737903, a: 1}
-    - _Emission_2: {r: 0.33469924, g: 0.1273585, b: 1, a: 1}
+    - Toon_Ramp_Tint: {r: 0.490566, g: 0.490566, b: 0.490566, a: 1}
+    - _Base_Color: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EdgeGlow: {r: 27.169811, g: 0.8971169, b: 4.2567086, a: 0}
+    - _Emission: {r: 0.11479884, g: 0, b: 0.3077861, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Emission_2: {r: 9.849155, g: 0, b: 6.1892548, a: 0}
+    - _UV_Scale: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
