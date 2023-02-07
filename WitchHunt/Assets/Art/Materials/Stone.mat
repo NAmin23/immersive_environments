@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7054961739658392110
+--- !u!114 &-436974441730275576
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Potion1
-  m_Shader: {fileID: -6465566751694194690, guid: cd9d21244871546d299e770edcc1352c, type: 3}
+  m_Name: Stone
+  m_Shader: {fileID: -6465566751694194690, guid: ed1ae35a49a124a6d8d69229d219d90e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -36,21 +36,13 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Mask_R_Emission:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 00547be8df1a4491b8d8573bd6721397, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 4, y: 4}
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
         m_Texture: {fileID: 0}
@@ -62,11 +54,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 4, y: 4}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 4, y: 4}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -74,11 +66,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Normal:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 3, y: 3}
         m_Offset: {x: 0, y: 0}
     - _Normal_Map:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 00547be8df1a4491b8d8573bd6721397, type: 3}
+        m_Scale: {x: 3, y: 3}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
@@ -90,59 +82,29 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Brightness_Rim: 2
-    - Rim_Power: 5
-    - Toon_Ramp_Offset: 0.5
-    - Toon_Ramp_Smoothness: 0
-    - _Alpha: 0.5
-    - _Ambient: 0
-    - _Amplitude: 1
-    - _BUILTIN_AlphaClip: 0
-    - _BUILTIN_Blend: 0
-    - _BUILTIN_CullMode: 2
-    - _BUILTIN_DstBlend: 0
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _BUILTIN_SrcBlend: 1
-    - _BUILTIN_Surface: 0
-    - _BUILTIN_ZTest: 4
-    - _BUILTIN_ZWrite: 1
-    - _BUILTIN_ZWriteControl: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _Depthpower: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Emission: 2
-    - _FillLevel: 0
-    - _Frequency: 10
     - _GlossMapScale: 1
-    - _Glossiness: 0.461
+    - _Glossiness: 0.212
     - _GlossyReflections: 1
-    - _IOR: 1.2
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Opacity: 1
     - _Parallax: 0.02
-    - _Smoothness: 0
+    - _Smoothness: 0.212
     - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 0
+    - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _StartFrequency: 4
-    - _Toon_Ramp_Offset_Point: 0.5
     - _UVSec: 0
-    - _Useblack: 0
-    - _Usedepth: 0
     - _ZWrite: 1
     m_Colors:
-    - Toon_Ramp_Tint: {r: 0.490566, g: 0.490566, b: 0.490566, a: 1}
-    - _Base_Color: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EdgeGlow: {r: 27.169811, g: 0.8971169, b: 4.2567086, a: 0}
-    - _Emission: {r: 0.11479884, g: 0, b: 0.3077861, a: 0}
+    - _Base_Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 0}
+    - _Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
+    - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Emission_2: {r: 9.849155, g: 0, b: 6.1892548, a: 0}
     - _UV_Scale: {r: 1, g: 1, b: 0, a: 0}
-    - _UpVector: {r: 0, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []

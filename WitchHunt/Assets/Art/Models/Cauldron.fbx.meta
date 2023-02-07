@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9a2b841bf49ff467195525d7adece247
+guid: 5d4f3e4d1c9df442eb72801fb1e15043
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,18 +7,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Cork
-    second: {fileID: 2100000, guid: ceed66580f817412a877746eeeb7108e, type: 2}
+      name: CastIron
+    second: {fileID: 2100000, guid: ddc2692e46b1f4490843a7d3dd4be6d4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Potion
-    second: {fileID: 2100000, guid: 6b20bcabb87f444b6a3a657709a80383, type: 2}
+      name: CauldronContents
+    second: {fileID: 2100000, guid: 7dc44f4ee60974c47b4e97f5788fd4b0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: PotionGlass
-    second: {fileID: 2100000, guid: 0359fd03f65724c659fa53dc77f2ab90, type: 2}
+      name: FirePit
+    second: {fileID: 2100000, guid: 02aa00687dd4e4b6b9add04fd6e9c62d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HotCauldron
+    second: {fileID: 2100000, guid: ddc2692e46b1f4490843a7d3dd4be6d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stone
+    second: {fileID: 2100000, guid: 4bf73263bbd5c48888dadac6ba7196d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StoneBrick
+    second: {fileID: 2100000, guid: 4bf73263bbd5c48888dadac6ba7196d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: f960fcf4c7f194e0ab8d015a72e772b5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -50,7 +70,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.05
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -104,7 +124,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.05
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

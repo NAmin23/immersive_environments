@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Potion1
-  m_Shader: {fileID: -6465566751694194690, guid: cd9d21244871546d299e770edcc1352c, type: 3}
+  m_Name: Wood
+  m_Shader: {fileID: -6465566751694194690, guid: ed1ae35a49a124a6d8d69229d219d90e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -44,6 +44,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Base_Color_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -61,6 +65,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emission_Texture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -94,7 +102,6 @@ Material:
     - Rim_Power: 5
     - Toon_Ramp_Offset: 0.5
     - Toon_Ramp_Smoothness: 0
-    - _Alpha: 0.5
     - _Ambient: 0
     - _Amplitude: 1
     - _BUILTIN_AlphaClip: 0
@@ -114,12 +121,10 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Emission: 2
-    - _FillLevel: 0
     - _Frequency: 10
     - _GlossMapScale: 1
     - _Glossiness: 0.461
     - _GlossyReflections: 1
-    - _IOR: 1.2
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -137,12 +142,9 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Toon_Ramp_Tint: {r: 0.490566, g: 0.490566, b: 0.490566, a: 1}
-    - _Base_Color: {r: 0, g: 0, b: 0, a: 0}
+    - _Base_Color: {r: 0.49056602, g: 0.30102912, b: 0.21520111, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EdgeGlow: {r: 27.169811, g: 0.8971169, b: 4.2567086, a: 0}
-    - _Emission: {r: 0.11479884, g: 0, b: 0.3077861, a: 0}
+    - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Emission_2: {r: 9.849155, g: 0, b: 6.1892548, a: 0}
     - _UV_Scale: {r: 1, g: 1, b: 0, a: 0}
-    - _UpVector: {r: 0, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
