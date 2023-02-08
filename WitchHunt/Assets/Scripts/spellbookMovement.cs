@@ -11,13 +11,11 @@ public class spellbookMovement : MonoBehaviour
     public Boolean movingUp;
     public Transform currPos;
 
-    private Animation anim;
-    public AnimationClip openAnim;
+    private Animator anim;
 
     private void Start()
     {
-        anim = gameObject.GetComponent<Animation>();
-        anim.clip = openAnim;
+        anim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -43,10 +41,16 @@ public class spellbookMovement : MonoBehaviour
                 gameObject.SetActive(false);
             }
         }
+
+        if(Input.GetKeyDown("space"))
+        {
+            PlayAnim();
+        }
     }
 
     public void PlayAnim()
     {
-        anim.Play();
+        anim.ResetTrigger("Scene");
+        anim.SetTrigger("Scene");
     }
 }
