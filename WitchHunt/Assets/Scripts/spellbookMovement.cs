@@ -21,6 +21,7 @@ public class spellbookMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if(movingUp)
         {
             if(i < 1)
@@ -41,16 +42,27 @@ public class spellbookMovement : MonoBehaviour
                 gameObject.SetActive(false);
             }
         }
+        */
+        
+        PlayAnim();
 
-        if(Input.GetKeyDown("space"))
-        {
-            PlayAnim();
-        }
     }
 
     public void PlayAnim()
     {
-        anim.ResetTrigger("Scene");
-        anim.SetTrigger("Scene");
+        if (anim != null)
+        {
+            if(Input.GetKeyDown("space"))
+            {
+                anim.SetTrigger("TrOpen");
+            }
+
+            if(Input.GetKeyUp("space"))
+            {
+                anim.SetTrigger("TrClose");
+            }
+            
+        }
+ 
     }
 }
