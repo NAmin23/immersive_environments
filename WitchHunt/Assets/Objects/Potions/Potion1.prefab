@@ -80,6 +80,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 044b6bcb621d94672b0cb8976a28d57c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1194316414}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 044b6bcb621d94672b0cb8976a28d57c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3188083614537954405}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 044b6bcb621d94672b0cb8976a28d57c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7725265863796275997}
     - targetCorrespondingSourceObject: {fileID: -3623150968066774615, guid: 044b6bcb621d94672b0cb8976a28d57c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1194316412}
@@ -147,3 +153,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   outlineMaterial: {fileID: 2100000, guid: 42dae606c7f7e48b1bca1083f000a494, type: 2}
+--- !u!114 &3188083614537954405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6689922648281179879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67bce000d4b334afa9b2ff0523d096be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7725265863796275997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6689922648281179879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8987e3cf6543f4a07bc763c886503205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impulseThreshold: 5
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3188083614537954405}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
+      - m_Target: {fileID: 7725265863796275997}
+        m_TargetAssemblyTypeName: Smash, Assembly-CSharp
+        m_MethodName: DestroySelf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0

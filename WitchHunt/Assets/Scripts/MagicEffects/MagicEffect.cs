@@ -17,6 +17,13 @@ public abstract class MagicEffect : MonoBehaviour
     public void AddTarget(MagicAffected target)
     {
         StartEffectForTarget(target);
+        targets.Add(target);
+    }
+
+    public void RemoveTarget(MagicAffected target)
+    {
+        EndEffectForTarget(target);
+        targets.Remove(target);
     }
 
     // Update is called once per frame
@@ -25,6 +32,11 @@ public abstract class MagicEffect : MonoBehaviour
         timeRemaining -= Time.deltaTime;
         if (timeRemaining <= 0)
         {
+            foreach (var target in targets)
+            {
+                EndEffectForTarget(target);
+            }
+
             if (destroyObjOnFinish)
             {
                 Destroy(this.gameObject);
@@ -43,4 +55,5 @@ public abstract class MagicEffect : MonoBehaviour
 
     public abstract void StartEffectForTarget(MagicAffected target);
     public abstract void TickEffectForTarget(MagicAffected target);
+    public abstract void EndEffectForTarget(MagicAffected target);
 }
