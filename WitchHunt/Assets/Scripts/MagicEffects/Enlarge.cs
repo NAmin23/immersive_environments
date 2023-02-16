@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enlarge : MagicEffect
 {
-    public float scale = 2.0f;
+    public float scale = 3.0f;
     public override void EndEffectForTarget(MagicAffected target)
     {
         target.transform.localScale /= scale;
@@ -12,7 +12,13 @@ public class Enlarge : MagicEffect
 
     public override float GetDuration()
     {
-        return 3.0f;
+        return -1.0f;
+    }
+
+
+    public override bool AffectOrigin()
+    {
+        return true;
     }
 
     public override void StartEffectForTarget(MagicAffected target)
@@ -22,10 +28,5 @@ public class Enlarge : MagicEffect
 
     public override void TickEffectForTarget(MagicAffected target)
     {
-    }
-
-    public override bool AffectOrigin()
-    {
-        return true;
     }
 }

@@ -11,6 +11,7 @@ public abstract class MagicEffect : MonoBehaviour
     private HashSet<MagicAffected> targets = new HashSet<MagicAffected>();
 
     private bool finished = false;
+    private bool pendingDestroy = false;
 
     private float timeRemaining = 3.0f;
 
@@ -60,6 +61,7 @@ public abstract class MagicEffect : MonoBehaviour
     {
         if (this.finished)
         {
+            Destroy(this);
             return;
         }
 
@@ -70,7 +72,7 @@ public abstract class MagicEffect : MonoBehaviour
 
         timeRemaining -= Time.deltaTime;
 
-        if (this.GetDuration() == 0 || (this.GetDuration() > 0 && timeRemaining < 0))
+        if (pendingDestroy || this.GetDuration() == 0 || (this.GetDuration() > 0 && timeRemaining < 0))
         {
             this.finished = true;
 
@@ -87,6 +89,11 @@ public abstract class MagicEffect : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void DestroyEffect()
+    {
+        this.pendingDestroy = true;
     }
 
     public abstract void StartEffectForTarget(MagicAffected target);

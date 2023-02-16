@@ -11,6 +11,8 @@ public class ColliderSpell : MonoBehaviour
     public List<string> effectsToCreateOnSelf;
     public List<string> effectsToPutOnObjects;
 
+    public Dictionary<MagicAffected, List<MagicEffect>> otherEffects = new Dictionary<MagicAffected, List<MagicEffect>>();
+
     public HashSet<MagicEffect> selfEffects = new HashSet<MagicEffect>();
 
     void Start()
@@ -27,10 +29,13 @@ public class ColliderSpell : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent<MagicAffected>(out var objMa))
         {
+            var otherEffectsList = new List<MagicEffect>();
+            this.otherEffects.Add(objMa, otherEffectsList);
             foreach (var effectName in effectsToPutOnObjects)
             {
                 var effect = (MagicEffect)other.gameObject.AddComponent(effectTypes[effectName]);
                 effect.SetOrigin(objMa);
+                otherEffectsList.Add(effect);
             }
 
             foreach (var effect in selfEffects)
@@ -40,7 +45,7 @@ public class ColliderSpell : MonoBehaviour
         }
     }
 
-    private void OnTriggerLeave(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.TryGetComponent<MagicAffected>(out var objMa))
         {
@@ -48,6 +53,12 @@ public class ColliderSpell : MonoBehaviour
             {
                 effect.RemoveTarget(objMa);
             }
+
+            foreach (var effect in otherEffects[objMa])
+            {
+                effect.DestroyEffect();
+            }
+            otherEffects.Remove(objMa);
         }
     }
 }
