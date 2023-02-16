@@ -7,25 +7,32 @@ public abstract class MagicEffect : MonoBehaviour
     public Vector3 initialTargetLocation;
     public Vector3 initialCastLocation;
 
-    private MagicAffected mainTarget;
-    private HashSet<MagicAffected> targets;
+    private MagicAffected origin;
+    private HashSet<MagicAffected> targets = new HashSet<MagicAffected>();
 
-    private float timeRemaining = 30.0f;
+    private bool finished = false;
+
+    private float timeRemaining = 3.0f;
 
     // Return 0 to run once. 
     // Return negative to run forever.
     public abstract float GetDuration();
 
-    public void SetMainTarget(MagicAffected target)
+    public void SetOrigin(MagicAffected target)
     {
-        if (this.mainTarget != null)
+        if (target == this.origin)
         {
-            this.RemoveTarget(this.mainTarget);
+            return;
         }
-        this.mainTarget = target;
-        if (this.mainTarget != null && this.TreatMainTargetAsTarget())
+
+        if (this.origin != null && this.AffectOrigin())
         {
-            this.AddTarget(this.mainTarget);
+            this.EndEffectForTarget(this.origin);
+        }
+        this.origin = target;
+        if (this.origin != null && this.AffectOrigin())
+        {
+            this.StartEffectForTarget(this.origin);
         }
     }
 
@@ -41,7 +48,7 @@ public abstract class MagicEffect : MonoBehaviour
         targets.Remove(target);
     }
 
-    public abstract bool TreatMainTargetAsTarget();
+    public abstract bool AffectOrigin();
 
     void Start()
     {
@@ -51,9 +58,22 @@ public abstract class MagicEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timeRemaining >= 0 || this.GetDuration() < 0)
+        if (this.finished)
         {
-            timeRemaining -= Time.deltaTime;
+            return;
+        }
+
+        foreach (var target in targets)
+        {
+            TickEffectForTarget(target);
+        }
+
+        timeRemaining -= Time.deltaTime;
+
+        if (this.GetDuration() == 0 || (this.GetDuration() > 0 && timeRemaining < 0))
+        {
+            this.finished = true;
+
             if (timeRemaining <= 0)
             {
                 foreach (var target in targets)
@@ -61,15 +81,10 @@ public abstract class MagicEffect : MonoBehaviour
                     EndEffectForTarget(target);
                 }
 
-                if (this.mainTarget != null)
+                if (this.origin != null && this.AffectOrigin())
                 {
-                    this.RemoveTarget(this.mainTarget);
+                    this.EndEffectForTarget(this.origin);
                 }
-            }
-
-            foreach (var target in targets)
-            {
-                TickEffectForTarget(target);
             }
         }
     }

@@ -12,7 +12,7 @@ public class Enlarge : MagicEffect
 
     public override float GetDuration()
     {
-        return 0;
+        return 3.0f;
     }
 
     public override void StartEffectForTarget(MagicAffected target)
@@ -24,7 +24,7 @@ public class Enlarge : MagicEffect
     {
     }
 
-    public override bool TreatMainTargetAsTarget()
+    public override bool AffectOrigin()
     {
         return true;
     }

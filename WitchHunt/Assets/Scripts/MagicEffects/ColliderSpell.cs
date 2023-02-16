@@ -11,7 +11,7 @@ public class ColliderSpell : MonoBehaviour
     public List<string> effectsToCreateOnSelf;
     public List<string> effectsToPutOnObjects;
 
-    public HashSet<MagicEffect> selfEffects;
+    public HashSet<MagicEffect> selfEffects = new HashSet<MagicEffect>();
 
     void Start()
     {
@@ -19,7 +19,7 @@ public class ColliderSpell : MonoBehaviour
         foreach (var effectName in effectsToCreateOnSelf)
         {
             var effect = (MagicEffect)gameObject.AddComponent(effectTypes[effectName]);
-            effect.SetMainTarget(ma);
+            effect.SetOrigin(ma);
         }
     }
 
@@ -30,7 +30,7 @@ public class ColliderSpell : MonoBehaviour
             foreach (var effectName in effectsToPutOnObjects)
             {
                 var effect = (MagicEffect)other.gameObject.AddComponent(effectTypes[effectName]);
-                effect.SetMainTarget(objMa);
+                effect.SetOrigin(objMa);
             }
 
             foreach (var effect in selfEffects)
