@@ -10,6 +10,11 @@ public class Enlarge : MagicEffect
         target.transform.localScale /= scale;
     }
 
+    public override float GetDuration()
+    {
+        return 0;
+    }
+
     public override void StartEffectForTarget(MagicAffected target)
     {
         target.transform.localScale *= scale;
@@ -17,5 +22,10 @@ public class Enlarge : MagicEffect
 
     public override void TickEffectForTarget(MagicAffected target)
     {
+    }
+
+    public override bool TreatMainTargetAsTarget()
+    {
+        return true;
     }
 }

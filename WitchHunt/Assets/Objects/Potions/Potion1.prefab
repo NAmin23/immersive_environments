@@ -86,6 +86,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 044b6bcb621d94672b0cb8976a28d57c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7725265863796275997}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 044b6bcb621d94672b0cb8976a28d57c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4532067055829076609}
     - targetCorrespondingSourceObject: {fileID: -3623150968066774615, guid: 044b6bcb621d94672b0cb8976a28d57c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1194316412}
@@ -181,13 +184,13 @@ MonoBehaviour:
   callback:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3188083614537954405}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 7725265863796275997}
+        m_TargetAssemblyTypeName: Smash, Assembly-CSharp
+        m_MethodName: DestroySelf
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -205,3 +208,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 0
+--- !u!114 &-4532067055829076609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6689922648281179879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7638df4d7484441ad5e24e8b3ad3d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}

@@ -7,12 +7,27 @@ public abstract class MagicEffect : MonoBehaviour
     public Vector3 initialTargetLocation;
     public Vector3 initialCastLocation;
 
-    public MagicAffected mainTarget;
+    private MagicAffected mainTarget;
     private HashSet<MagicAffected> targets;
 
-    public float timeRemaining = 3.0f;
+    private float timeRemaining = 30.0f;
 
-    public bool destroyObjOnFinish = true;
+    // Return 0 to run once. 
+    // Return negative to run forever.
+    public abstract float GetDuration();
+
+    public void SetMainTarget(MagicAffected target)
+    {
+        if (this.mainTarget != null)
+        {
+            this.RemoveTarget(this.mainTarget);
+        }
+        this.mainTarget = target;
+        if (this.mainTarget != null && this.TreatMainTargetAsTarget())
+        {
+            this.AddTarget(this.mainTarget);
+        }
+    }
 
     public void AddTarget(MagicAffected target)
     {
@@ -26,30 +41,36 @@ public abstract class MagicEffect : MonoBehaviour
         targets.Remove(target);
     }
 
+    public abstract bool TreatMainTargetAsTarget();
+
+    void Start()
+    {
+        this.timeRemaining = GetDuration();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        timeRemaining -= Time.deltaTime;
-        if (timeRemaining <= 0)
+        if (timeRemaining >= 0 || this.GetDuration() < 0)
         {
+            timeRemaining -= Time.deltaTime;
+            if (timeRemaining <= 0)
+            {
+                foreach (var target in targets)
+                {
+                    EndEffectForTarget(target);
+                }
+
+                if (this.mainTarget != null)
+                {
+                    this.RemoveTarget(this.mainTarget);
+                }
+            }
+
             foreach (var target in targets)
             {
-                EndEffectForTarget(target);
+                TickEffectForTarget(target);
             }
-
-            if (destroyObjOnFinish)
-            {
-                Destroy(this.gameObject);
-            }
-            else
-            {
-                Destroy(this);
-            }
-        }
-
-        foreach (var target in targets)
-        {
-            TickEffectForTarget(target);
         }
     }
 
