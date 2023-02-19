@@ -88,6 +88,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_6d677c6426124b40b62a3dedc8ea6d32_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 761847e30cf85419c816cdbcf56e2150, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - Brightness_Rim: 2
@@ -124,6 +128,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Opacity: 1
+    - _PaintScale: 0
     - _Parallax: 0.02
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
@@ -138,6 +143,7 @@ Material:
     m_Colors:
     - Toon_Ramp_Tint: {r: 0.490566, g: 0.490566, b: 0.490566, a: 1}
     - _Base_Color: {r: 0, g: 0, b: 0, a: 0}
+    - _Base_Color_2: {r: 1, g: 1, b: 1, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EdgeGlow: {r: 27.169811, g: 0.8971169, b: 4.2567086, a: 0}
     - _Emission: {r: 0.11479884, g: 0, b: 0.3077861, a: 0}
