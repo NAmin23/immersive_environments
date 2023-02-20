@@ -120,7 +120,7 @@ Material:
     - _BUILTIN_ZWrite: 1
     - _BUILTIN_ZWriteControl: 0
     - _BumpScale: 1
-    - _Contrast: 1
+    - _Contrast: 3
     - _Cutoff: 0.5
     - _Depthpower: 1
     - _DetailNormalMapScale: 1
@@ -149,7 +149,7 @@ Material:
     m_Colors:
     - Toon_Ramp_Tint: {r: 0.490566, g: 0.490566, b: 0.490566, a: 1}
     - _Base_Color: {r: 0.90588236, g: 0.90588236, b: 0.90588236, a: 0}
-    - _Base_Color_2: {r: 1, g: 1, b: 1, a: 0}
+    - _Base_Color_2: {r: 0.9811321, g: 0.9618821, b: 0.69882524, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

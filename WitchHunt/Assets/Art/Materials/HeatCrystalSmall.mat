@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: HeatCrystalSmall
-  m_Shader: {fileID: -6465566751694194690, guid: 590e0b2d2e0ae43e5899de9845c9c33e, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: c85427af7267b48d1b168eb293037ca9, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -80,14 +80,14 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Hue: 358.9
-    - _HueMax: -3.7
-    - _HueMin: -28.8
-    - _MaxDist: 2.5
+    - _HueMax: -93.6
+    - _HueMin: 12.06
+    - _MaxDist: 3.2
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _PaintContrast: 2
-    - _PaintScale: 1
+    - _PaintContrast: 3
+    - _PaintScale: 2
     - _Parallax: 0.02
     - _Power: 1
     - _SmoothnessTextureChannel: 0
