@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HeatCrystalLarge
-  m_Shader: {fileID: -6465566751694194690, guid: 590e0b2d2e0ae43e5899de9845c9c33e, type: 3}
+  m_Name: CrystalBall
+  m_Shader: {fileID: -6465566751694194690, guid: baf7239c23d104df99a2985f83de7286, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -51,6 +51,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -63,41 +67,57 @@ Material:
         m_Texture: {fileID: 2800000, guid: 95025f0e5b2f14a90a2da66c2e70eb7b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_df9251008418491b8ea73095acd3b9f4_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 761847e30cf85419c816cdbcf56e2150, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_fcfe22d291584a1cba9cab7f91cc7cb1_Texture_1:
         m_Texture: {fileID: 2800000, guid: 761847e30cf85419c816cdbcf56e2150, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Alpha: 0.8
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _BumpScale: 1
+    - _Contrast: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Emission: 3
+    - _Emission: 2
+    - _FillLevel: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Hue: 0
-    - _HueMax: -46.2
-    - _HueMin: 41.1
-    - _MaxDist: 1.03
-    - _Metallic: 0
+    - _HueMax: -18.09
+    - _HueMin: -65.31
+    - _IOR: 1.4
+    - _MaxDist: 1.5
+    - _Metallic: 0.8
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _PaintContrast: 3
+    - _PaintContrast: 6.13
     - _PaintScale: 1
     - _Parallax: 0.02
-    - _Power: 1.83
+    - _Power: 1
+    - _Smoothness: 0.94
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _Thickness: 0
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
+    - _Base_Color: {r: 0.031372547, g: 1, b: 0.86395675, a: 1}
+    - _Base_Color_2: {r: 0.6597957, g: 0, b: 0.7372549, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EdgeGlow: {r: 21.133154, g: 0, b: 11.574265, a: 1}
+    - _Emission: {r: 0.2028302, g: 0.28975737, b: 0.8113208, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Emission_2: {r: 0.5699029, g: 0, b: 1, a: 0}
+    - _UpVector: {r: 0, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8453534283669942709
 MonoBehaviour:
