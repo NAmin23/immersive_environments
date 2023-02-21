@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: RoofStainedGlass
-  m_Shader: {fileID: -6465566751694194690, guid: 2a12fd543cb774a60b2760822ec0a3b6, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 7f3dfc16720b449e28a0416bc3accecd, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -84,6 +84,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NormalFromTexture_8ccccca1af9749d29d0a7edf5537b3b9_Texture_0:
+        m_Texture: {fileID: 2800000, guid: 759bbedf09f5446a580de237c1ff2f11, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Normal_Map:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -100,14 +104,19 @@ Material:
         m_Texture: {fileID: 2800000, guid: 761847e30cf85419c816cdbcf56e2150, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_98ac0cfcd3a74a03bb32aa9a7bc823e3_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 759bbedf09f5446a580de237c1ff2f11, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - Brightness_Rim: 2
     - Rim_Power: 5
     - Toon_Ramp_Offset: 0.5
     - Toon_Ramp_Smoothness: 0
-    - _Ambient: 0
+    - _Ambient: 0.2
     - _Amplitude: 1
+    - _AngleVariance: 0.15
     - _BUILTIN_AlphaClip: 0
     - _BUILTIN_Blend: 0
     - _BUILTIN_CullMode: 2
@@ -132,16 +141,21 @@ Material:
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
+    - _NormalScale: 61.21
     - _OcclusionStrength: 1
     - _Opacity: 1
     - _PaintScale: 0.5
     - _Parallax: 0.02
+    - _ReflectionStrength: 2
+    - _ReflectionTightness: 2
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 0
     - _SrcBlend: 1
     - _StartFrequency: 4
     - _Toon_Ramp_Offset_Point: 0.5
+    - _TransmissionStrength: 2
+    - _TransmissionTightness: 2
     - _UVScale: 100
     - _UVSec: 0
     - _Useblack: 0
@@ -152,9 +166,13 @@ Material:
     - _Base_Color: {r: 1, g: 1, b: 1, a: 0}
     - _Base_Color_2: {r: 0.76268244, g: 0.773093, b: 0.8207547, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 0.43529412, g: 0.011764699, b: 0.107348986, a: 1}
+    - _Color2: {r: 0.017776059, g: 0, b: 0.4339623, a: 1}
     - _ColorMax: {r: 0.0018509512, g: 0, b: 0.2924528, a: 0}
     - _ColorMin: {r: 0.18867922, g: 0, b: 0.025058959, a: 0}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _LightDirection: {r: 0, g: -1, b: 0.3, a: 0}
     - _UV_Scale: {r: 1, g: 1, b: 0, a: 0}
+    - _Vector3: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
