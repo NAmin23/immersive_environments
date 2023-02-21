@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 003eaa6fb84994cc88e9cbd2c0db94ce
+guid: 9bc5e0f948ead4ea98c7786eba444a81
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,18 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: FlameInner
-    second: {fileID: 2100000, guid: 0359fd03f65724c659fa53dc77f2ab90, type: 2}
+      name: CastIron
+    second: {fileID: 2100000, guid: ddc2692e46b1f4490843a7d3dd4be6d4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Torch
-    second: {fileID: 2100000, guid: 2507dd49cb6e4bb4ebb2d4a7f83460ed, type: 2}
+      name: Material
+    second: {fileID: 2100000, guid: e6d1ee54c459b48228575442d1a51a85, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: TorchRings
-    second: {fileID: 2100000, guid: a23b7b7cafbd291468d603c9ea273b19, type: 2}
+      name: WindowFrame
+    second: {fileID: 2100000, guid: ddc2692e46b1f4490843a7d3dd4be6d4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -50,7 +50,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 3
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -104,7 +104,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 3
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
