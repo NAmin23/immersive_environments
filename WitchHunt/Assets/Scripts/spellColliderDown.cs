@@ -20,6 +20,7 @@ public class spellColliderDown : MonoBehaviour
             spellbook.GetComponent<spellbookMovement>().i = 0;
             spellbook.GetComponent<spellbookMovement>().movingUp = false;
             spellbook.GetComponent<spellbookMovement>().currPos = spellbook.gameObject.transform;
+            spellbook.GetComponent<spellbookMovement>().PlayCloseAnim();
         }
     }
 
