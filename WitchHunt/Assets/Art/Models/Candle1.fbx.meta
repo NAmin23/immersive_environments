@@ -1,9 +1,29 @@
 fileFormatVersion: 2
-guid: e9eec4b918071d647b47959f5974022c
+guid: 1d619550945b1405889ed06d52c8bec4
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CandleWax
+    second: {fileID: 2100000, guid: 29efc854a11ca493492bcf7276c4a45c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CandleWick
+    second: {fileID: 2100000, guid: 0bae7f804a9a3449983bc44d9881cb13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FlameInner
+    second: {fileID: 2100000, guid: 5962577802719c64796d7ed0ff3e10fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FlameOuter
+    second: {fileID: 2100000, guid: 3e16513e559524c789808f0a237a0201, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
