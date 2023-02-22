@@ -95,14 +95,14 @@ Material:
     - _HueMin: -65.31
     - _IOR: 1.4
     - _MaxDist: 1.5
-    - _Metallic: 0.8
+    - _Metallic: 0.5
     - _Mode: 0
     - _OcclusionStrength: 1
     - _PaintContrast: 6.13
     - _PaintScale: 1
     - _Parallax: 0.02
     - _Power: 1
-    - _Smoothness: 0.94
+    - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
