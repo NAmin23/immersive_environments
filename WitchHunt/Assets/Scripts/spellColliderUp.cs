@@ -21,7 +21,7 @@ public class spellColliderUp : MonoBehaviour
             spellbook.GetComponent<spellbookMovement>().i = 0;
             spellbook.GetComponent<spellbookMovement>().movingUp = true;
             spellbook.GetComponent<spellbookMovement>().currPos = spellbook.gameObject.transform;
-            spellbook.GetComponent<spellbookMovement>().PlayAnim();
+            spellbook.GetComponent<spellbookMovement>().PlayOpenAnim();
         }
     }
 
