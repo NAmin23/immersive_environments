@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Flame 1
+  m_Name: Mushroom
   m_Shader: {fileID: -6465566751694194690, guid: ed1ae35a49a124a6d8d69229d219d90e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
