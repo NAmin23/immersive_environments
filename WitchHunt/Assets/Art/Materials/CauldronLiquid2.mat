@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CauldronLiquid
+  m_Name: CauldronLiquid2
   m_Shader: {fileID: -6465566751694194690, guid: ed1ae35a49a124a6d8d69229d219d90e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -148,10 +148,10 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Toon_Ramp_Tint: {r: 0.490566, g: 0.490566, b: 0.490566, a: 1}
-    - _Base_Color: {r: 0, g: 0.7921569, b: 0.25611386, a: 0}
+    - _Base_Color: {r: 0, g: 0.7900574, b: 1, a: 0}
     - _Base_Color_2: {r: 0, g: 1, b: 0.9013953, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Emission: {r: 0, g: 0.24705882, b: 0.041641768, a: 1}
+    - _Emission: {r: 0, g: 0.27784413, b: 0.3019608, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _UV_Scale: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []

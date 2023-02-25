@@ -11339,6 +11339,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -772798723794940250, guid: f4020a53c646d44668caa70febcc7b23, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f48895ba90264431f9bb2f918438fb3a, type: 2}
     - target: {fileID: -674449036139524865, guid: f4020a53c646d44668caa70febcc7b23, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -11347,6 +11351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniCauldron
       objectReference: {fileID: 0}
+    - target: {fileID: 6699319288467261213, guid: f4020a53c646d44668caa70febcc7b23, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bdac0d340929c4c438c0ee97a4a204b5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -674449036139524865, guid: f4020a53c646d44668caa70febcc7b23, type: 3}
