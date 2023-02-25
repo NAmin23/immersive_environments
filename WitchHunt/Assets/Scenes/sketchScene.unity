@@ -410,7 +410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 96879614}
-  - component: {fileID: 96879613}
+  - component: {fileID: 96879616}
   - component: {fileID: 96879610}
   - component: {fileID: 96879612}
   - component: {fileID: 96879611}
@@ -432,7 +432,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0.019607844}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -516,14 +516,6 @@ MonoBehaviour:
   fadeColor: {r: 0.01, g: 0.01, b: 0.01, a: 1}
   fadeOnStart: 1
   renderQueue: 5000
---- !u!81 &96879613
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96879609}
-  m_Enabled: 1
 --- !u!4 &96879614
 Transform:
   m_ObjectHideFlags: 0
@@ -603,6 +595,14 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!81 &96879616
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96879609}
+  m_Enabled: 1
 --- !u!1 &97304349
 GameObject:
   m_ObjectHideFlags: 0
@@ -4228,11 +4228,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 370606443}
+  - {fileID: 96879614}
   - {fileID: 1590495430}
   - {fileID: 788472942}
   - {fileID: 513638067}
   - {fileID: 1153692302}
-  - {fileID: 96879614}
   - {fileID: 20572787}
   - {fileID: 735875975}
   - {fileID: 1971576967}
@@ -16580,7 +16580,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 20
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -16615,7 +16615,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
