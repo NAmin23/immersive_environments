@@ -26,6 +26,6 @@ public class spellColliderDown : MonoBehaviour
 
     private void Update()
     {
-        gameObject.transform.position = centralEyeAnchor.position + new Vector3(0.0f, -0.25f, 0.16f);
+        gameObject.transform.position = centralEyeAnchor.position + new Vector3(0.0f, -1.5f, 0.16f);
     }
 }

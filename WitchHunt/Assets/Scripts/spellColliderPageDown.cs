@@ -12,18 +12,16 @@ public class spellColliderPageDown : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "OVRHandPrefabL")
+        if (other.gameObject.name == "OVRHandPrefabL" && spellbook.activeSelf)
         {
             String temp = "DownUp";
             leftInputText.text = temp;
-
-            //Page down function
-            // Sound effect
+            spellbook.GetComponent<spellbookMovement>().PageTurnBackward();
         }
     }
 
     private void Update()
     {
-        gameObject.transform.position = centralEyeAnchor.position + new Vector3(-0.25f, -0.25f, 0.16f);
+        gameObject.transform.position = centralEyeAnchor.position + new Vector3(-1.0f, -0.25f, 0.35f);
     }
 }

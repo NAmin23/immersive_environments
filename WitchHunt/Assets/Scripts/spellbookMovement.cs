@@ -10,6 +10,7 @@ public class spellbookMovement : MonoBehaviour
     public float i; //iterator
     public Boolean movingUp;
     public Transform currPos;
+    private int pageNum = 0;
 
     private Animator anim;
 
@@ -18,7 +19,6 @@ public class spellbookMovement : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -43,25 +43,32 @@ public class spellbookMovement : MonoBehaviour
             }
         }
         
-        
         PlayAnim();
 
     }
 
     public void PlayAnim()
     {
+        //Keyboard controls
         if (anim != null)
         {
             if(Input.GetKeyDown("space"))
             {
-                anim.SetTrigger("TrOpen");
+                PlayOpenAnim();
             }
 
             if(Input.GetKeyUp("space"))
             {
-                anim.SetTrigger("TrClose");
+                PlayCloseAnim();
             }
-            
+            if(Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                PageTurnForward();
+            }
+            if(Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                PageTurnBackward();
+            }
         }
  
     }
@@ -79,6 +86,56 @@ public class spellbookMovement : MonoBehaviour
         if (anim != null)
         {
             anim.SetTrigger("TrClose");
+        }
+    }
+
+    public void PageTurnForward()
+    {
+        if (anim != null)
+        {
+            switch (pageNum)
+            {
+                case 0:
+                    anim.SetTrigger("TrPageZero->One");
+                    pageNum++;
+                    break;
+
+                case 1:
+                    anim.SetTrigger("TrPageOne->Two");
+                    pageNum++;
+                    break;
+
+                case 2:
+                    anim.SetTrigger("TrPageTwo->Three");
+                    pageNum++;
+                    break;
+
+            }
+        }
+    }
+
+    public void PageTurnBackward()
+    {
+        if (anim != null)
+        {
+            switch (pageNum)
+            {
+                case 1:
+                    anim.SetTrigger("TrPageOne->Zero");
+                    pageNum--;
+                    break;
+
+                case 2:
+                    anim.SetTrigger("TrPageTwo->One");
+                    pageNum--;
+                    break;
+
+                case 3:
+                    anim.SetTrigger("TrPageThree->Two");
+                    pageNum--;
+                    break;
+
+            }
         }
     }
 }
