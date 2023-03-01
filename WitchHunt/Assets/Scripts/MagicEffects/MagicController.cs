@@ -12,6 +12,8 @@ public class MagicController : MonoBehaviour
 
     public List<GameObject> shrunkObjects;
 
+    public List<GameObject> Lights;
+
     public void spawnPancake()
     {
         GameObject newPancake;
@@ -28,11 +30,22 @@ public class MagicController : MonoBehaviour
 
     public void shrinkObjects()
     {
-        foreach (var shrinkObject in shrunkObjects)
+        for (int i = 0; i < shrunkObjects.Count; i++)
         {
-            shrinkObject.transform.localScale *= UnityEngine.Random.Range(0.1f, 3.0f);
+            shrunkObjects[i].transform.localScale *= UnityEngine.Random.Range(0.25f, 2.5f);
         }
 
+        particleEffect.SetActive(false);
+    }
+
+    public void colorChange()
+    {
+        foreach(var light in Lights)
+        {
+            Light lt;
+            lt = light.GetComponent<Light>();
+            lt.color = new Color(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value);
+        }
         particleEffect.SetActive(false);
     }
 }
