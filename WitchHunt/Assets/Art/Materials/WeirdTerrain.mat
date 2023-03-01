@@ -87,7 +87,7 @@ Material:
     - _DstBlend: 0
     - _Emission: 2
     - _FillLevel: 0
-    - _FogExponent: 0.02
+    - _FogExponent: 0.002
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -114,7 +114,7 @@ Material:
     - _Base_Color: {r: 0.031372547, g: 1, b: 0.86395675, a: 1}
     - _Base_Color_2: {r: 0, g: 0.7372549, b: 0.67759717, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EdgeGlow: {r: 77.78345, g: 179.82475, b: 279.493, a: 1}
+    - _EdgeGlow: {r: 19.445862, g: 44.95619, b: 69.87325, a: 1}
     - _Emission: {r: 0.2028302, g: 0.28975737, b: 0.8113208, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Emission_2: {r: 1, g: 0, b: 0.39124346, a: 0}
