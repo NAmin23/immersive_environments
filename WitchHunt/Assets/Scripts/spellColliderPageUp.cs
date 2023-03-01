@@ -16,14 +16,13 @@ public class spellColliderPageUp : MonoBehaviour
         {
             String temp = "PageUp";
             leftInputText.text = temp;
-
-            //Page up function
-            // Sound effect
+            spellbook.GetComponent<spellbookMovement>().PageTurnForward();
         }
     }
 
     private void Update()
     {
-        gameObject.transform.position = centralEyeAnchor.position + new Vector3(0.35f, -0.25f, 0.16f);
+        //gameObject.transform.position = centralEyeAnchor.transform.position + new Vector3(1.0f, -0.25f, 0.0f);
+        //gameObject.transform.localRotation = Quaternion.Euler(0.0f, centralEyeAnchor.transform.rotation.y, 90.0f);
     }
 }
