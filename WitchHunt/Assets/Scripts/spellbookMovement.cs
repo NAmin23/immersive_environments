@@ -61,11 +61,11 @@ public class spellbookMovement : MonoBehaviour
             {
                 PlayCloseAnim();
             }
-            if(Input.GetKeyDown(KeyCode.Alpha2))
+            if(Input.GetKeyDown(KeyCode.E))
             {
                 PageTurnForward();
             }
-            if(Input.GetKeyDown(KeyCode.Alpha1))
+            if(Input.GetKeyDown(KeyCode.Q))
             {
                 PageTurnBackward();
             }
