@@ -40,7 +40,7 @@ public class MagicController : MonoBehaviour
         shrinkAudio.Play();
         for (int i = 0; i < shrunkObjects.Count; i++)
         {
-            shrunkObjects[i].transform.localScale *= UnityEngine.Random.Range(0.25f, 2.5f);
+            shrunkObjects[i].transform.localScale *= UnityEngine.Random.Range(0.25f, 2.0f);
         }
 
         particleEffect.SetActive(false);
